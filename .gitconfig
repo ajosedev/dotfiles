@@ -1,0 +1,23 @@
+[includeIf "gitdir:~/dev/"]
+	path = .gitconfig-work
+[includeIf "gitdir:~/pdev/"]
+	path = .gitconfig-personal
+[core]
+	excludesfile = /Users/genero/.gitignore_global
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s $'
+	sf = show --pretty="format:" --name-only
+	pp = !sh -c 'git pull && git push'
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decora$
+	br = branch -avv
+	s = status
+	p = pull
+	pu = push
+	d = diff
+	co = checkout
+	lgfp = log --name-only --first-parent
+	sps = stash && git pull && git stash pop
+[push]
+	default = simple
+[color]
+	ui = true
