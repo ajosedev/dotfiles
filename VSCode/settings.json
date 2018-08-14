@@ -1,0 +1,60 @@
+{
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.dragAndDrop": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.insertSpaces": true,
+  "editor.lineHeight": 18,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "workbench.colorTheme": "Bimbo Theme",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "newUntitledFile",
+
+  /* Language specific */
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+
+  /* Settings Sync */
+  "sync.gist": "836cf964469ecb4b060c8068cc65be8e",
+  "sync.lastUpload": "",
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.lastDownload": "2018-08-13T05:32:33.397Z",
+  "sync.forceDownload": false,
+  "sync.host": "",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+
+  /* Git */
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.inputValidation": "always",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.keymap": "chorded",
+
+  "stylelint.configOverrides": {
+    "ignoreFiles": "!src/**/*.scss"
+  },
+  "window.zoomLevel": 0,
+  "breadcrumbs.enabled": true
+  // "editor.codeActionsOnSave": {
+  //     "source.organizeImports": true,
+  // }
+}
