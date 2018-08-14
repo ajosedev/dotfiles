@@ -16,7 +16,7 @@
 	d = diff
 	co = checkout
 	lgfp = log --name-only --first-parent
-	sps = stash && git pull && git stash pop
+	sps = !git stash && git pull && git stash pop
 [push]
 	default = simple
 [color]
