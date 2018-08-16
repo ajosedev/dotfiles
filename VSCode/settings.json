@@ -1,4 +1,5 @@
 {
+  "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.dragAndDrop": false,
   "editor.fontFamily": "Fira Code",
@@ -15,7 +16,10 @@
   "editor.tabSize": 2,
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDragAndDrop": false,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "window.zoomLevel": 0,
   "workbench.colorTheme": "Bimbo Theme",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -52,8 +56,7 @@
   "stylelint.configOverrides": {
     "ignoreFiles": "!src/**/*.scss"
   },
-  "window.zoomLevel": 0,
-  "breadcrumbs.enabled": true
+  "eslint.autoFixOnSave": true
   // "editor.codeActionsOnSave": {
   //     "source.organizeImports": true,
   // }
