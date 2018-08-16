@@ -4,6 +4,7 @@
 	path = .gitconfig-personal
 [core]
 	excludesfile = /Users/genero/.gitignore_global
+	editor = vim
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s $'
 	sf = show --pretty="format:" --name-only
