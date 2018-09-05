@@ -56,7 +56,7 @@
   "stylelint.configOverrides": {
     "ignoreFiles": "!src/**/*.scss"
   },
-  "eslint.autoFixOnSave": true
+  "files.trimTrailingWhitespace": true,
   // "editor.codeActionsOnSave": {
   //     "source.organizeImports": true,
   // }
