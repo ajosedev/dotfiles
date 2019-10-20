@@ -21,4 +21,7 @@ if [ -f '/Users/andrew/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/and
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/andrew/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/andrew/google-cloud-sdk/completion.zsh.inc'; fi
 
+export EDITOR='vim'
+
 alias j="fasd_cd"
+alias py="python3"
