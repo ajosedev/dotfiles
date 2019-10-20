@@ -1,0 +1,26 @@
+{
+	"test": {
+		"scope": "javascript, javascriptreact, typescript",
+		"prefix": "test",
+		"body": [
+			"test('$1', () => {",
+			"	$2",
+			"});",
+		],
+		"description": "Create empty test"
+	},
+	"test with render": {
+		"scope": "javascript, javascriptreact, typescript",
+		"prefix": "ftest",
+		"body": [
+			"test('$1', () => {",
+			"	const { $3 } = render(",
+			"		$2",
+			"	);",
+			"",
+			"	$4",
+			"});",
+		],
+		"description": "Create basic test with render"
+	},
+}
