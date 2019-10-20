@@ -3,7 +3,7 @@
 [includeIf "gitdir:~/pdev/"]
 	path = .gitconfig-personal
 [core]
-	excludesfile = /Users/genero/.gitignore_global
+	excludesfile = /Users/andrew/.gitignore_global
 	editor = vim
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s $'
@@ -18,6 +18,7 @@
 	co = checkout
 	lgfp = log --name-only --first-parent
 	sps = !git stash && git pull && git stash pop
+	cleanup = git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 [push]
 	default = simple
 [color]
