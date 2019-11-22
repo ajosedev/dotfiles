@@ -18,7 +18,7 @@
 	co = checkout
 	lgfp = log --name-only --first-parent
 	sps = !git stash && git pull && git stash pop
-	cleanup = git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+	cleanup = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 [push]
 	default = simple
 [color]
