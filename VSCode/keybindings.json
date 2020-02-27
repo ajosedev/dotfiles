@@ -22,22 +22,6 @@
     "command": "-workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+alt+up",
-    "command": "spaceBlockJumper.moveUp",
-  },
-  {
-    "key": "ctrl+alt+down",
-    "command": "spaceBlockJumper.moveDown"
-  },
-  {
-    "key": "ctrl+alt+shift+up",
-    "command": "spaceBlockJumper.selectUp",
-  },
-  {
-    "key": "ctrl+alt+shift+down",
-    "command": "spaceBlockJumper.selectDown",
-  },
-  {
     "key": "shift+alt+d",
     "command": "editor.emmet.action.balanceIn"
   },
@@ -79,5 +63,16 @@
     "key": "ctrl+shift+right",
     "command": "-editor.action.smartSelect.expand",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-lineBreakInsert",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "vscode-neovim.send",
+    "args": "<c-o>",
+    "when": "editorTextFocus && neovim.mode == insert"
   }
 ]

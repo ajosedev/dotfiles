@@ -1,14 +1,13 @@
 {
   "breadcrumbs.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
-  "editor.cursorSurroundingLines": 9,
+  "editor.cursorSurroundingLines": 2,
   "editor.dragAndDrop": false,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
   "editor.formatOnType": false,
   "editor.insertSpaces": true,
   "editor.lineHeight": 18,
@@ -40,7 +39,8 @@
 
   /* Language specific */
   "[json]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
 
@@ -67,30 +67,6 @@
   },
   "gitlens.keymap": "chorded",
 
-  /* Vim */
-  "vim.enableNeovim": false,
-  "vim.neovimPath": "nvim",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["k", "j"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.handleKeys": {
-    "<C-d>": true
-  },
-  "vim.disableExtension": false,
-  "vim.statusBarColorControl": false,
-  // "editor.quickSuggestionsDelay": 200,
-
-  "stylelint.configOverrides": {
-    "ignoreFiles": "!src/**/*.scss"
-  },
-
   "bracket-pair-colorizer-2.highlightActiveScope": true,
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
 
@@ -99,4 +75,8 @@
   "gitlens.views.lineHistory.location": "gitlens",
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
+
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "search.enableSearchEditorPreview": true,
+  "html.mirrorCursorOnMatchingTag": true,
 }
