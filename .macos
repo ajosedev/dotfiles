@@ -133,7 +133,7 @@ brew cask install \
   sequel-pro \
   slack \
   spectacle \
-  spotify
+  spotify \
   visual-studio-code
 
 # Install node
