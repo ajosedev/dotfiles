@@ -121,6 +121,9 @@ brew install \
   tmuxinator \
   yarn
 
+# Tap homebrew/cask-versions
+brew tap homebrew/cask-versions
+
 # Install apps with brew cask
 brew cask install \
   1password \
