@@ -1,19 +1,19 @@
 {
-	"test": {
+	"it": {
 		"scope": "javascript, javascriptreact, typescript",
-		"prefix": "test",
+		"prefix": "it",
 		"body": [
-			"test('$1', () => {",
+			"it('$1', () => {",
 			"	$2",
 			"});",
 		],
 		"description": "Create empty test"
 	},
-	"test with render": {
+	"it with render": {
 		"scope": "javascript, javascriptreact, typescript",
-		"prefix": "ftest",
+		"prefix": "itr",
 		"body": [
-			"test('$1', () => {",
+			"it('$1', () => {",
 			"	const { $3 } = render(",
 			"		$2",
 			"	);",
