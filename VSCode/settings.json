@@ -79,4 +79,5 @@
   "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
   "search.enableSearchEditorPreview": true,
   "html.mirrorCursorOnMatchingTag": true,
+  "go.useLanguageServer": true,
 }
