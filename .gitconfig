@@ -5,6 +5,8 @@
 [core]
 	excludesfile = /Users/andrew/.gitignore_global
 	editor = vim
+[push]
+	default = simple
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s $'
 	sf = show --pretty="format:" --name-only
