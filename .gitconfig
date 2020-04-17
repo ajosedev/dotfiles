@@ -1,7 +1,7 @@
-[includeIf "gitdir:~/dev/"]
-	path = .gitconfig-work
-[includeIf "gitdir:~/pdev/"]
-	path = .gitconfig-personal
+[includeIf "gitdir:~/code/99designs/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/code/personal/"]
+	path = ~/.gitconfig-personal
 [core]
 	excludesfile = /Users/andrew/.gitignore_global
 	editor = vim
@@ -19,7 +19,5 @@
 	lgfp = log --name-only --first-parent
 	sps = !git stash && git pull && git stash pop
 	cleanup = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
-[push]
-	default = simple
 [color]
 	ui = true
