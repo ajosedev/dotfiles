@@ -1,6 +1,6 @@
 {
 	"it": {
-		"scope": "javascript, javascriptreact, typescript",
+		"scope": "javascript, javascriptreact, typescript, typescriptreact",
 		"prefix": "it",
 		"body": [
 			"it('$1', () => {",
@@ -10,7 +10,7 @@
 		"description": "Create empty test"
 	},
 	"it with render": {
-		"scope": "javascript, javascriptreact, typescript",
+		"scope": "javascript, javascriptreact, typescript, typescriptreact",
 		"prefix": "itr",
 		"body": [
 			"it('$1', () => {",
