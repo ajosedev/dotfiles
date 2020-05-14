@@ -14,7 +14,6 @@
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
   "editor.snippetSuggestions": "top",
-  "editor.tabSize": 2,
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
@@ -80,4 +79,11 @@
   "search.enableSearchEditorPreview": true,
   "html.mirrorCursorOnMatchingTag": true,
   "go.useLanguageServer": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontSize": 14,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
