@@ -64,6 +64,8 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
+# Enable key repeating
+default write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -131,13 +133,16 @@ brew cask install \
   docker \
   firefox \
   firefox-developer-edition \
+  flux \
   google-chrome \
+  iterm2 \
   itsycal \
   sequel-pro \
   slack \
   spectacle \
   spotify \
-  visual-studio-code
+  visual-studio-code \
+  zettlr
 
 # Install node
 n lts
