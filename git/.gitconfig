@@ -3,8 +3,9 @@
 [includeIf "gitdir:~/code/personal/"]
 	path = ~/.gitconfig-personal
 [core]
-	excludesfile = /Users/andrew/.gitignore_global
 	editor = vim
+	excludesfile = /Users/andrew/.gitignore_global
+	hooksPath = ~/githooks
 [push]
 	default = simple
 [alias]
