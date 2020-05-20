@@ -109,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # Git
 alias g="git"
 alias gcb="git checkout -b"
+alias gd="git diff"
+alias gds="git diff --staged"
 alias gs="git status"
 alias gp="git push"
 alias gc="git commit -v"
