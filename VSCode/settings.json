@@ -13,7 +13,6 @@
   "editor.lineHeight": 18,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
-  "editor.snippetSuggestions": "top",
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
@@ -76,7 +75,6 @@
   "gitlens.views.search.location": "gitlens",
 
   "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
-  "search.enableSearchEditorPreview": true,
   "html.mirrorCursorOnMatchingTag": true,
   "go.useLanguageServer": true,
   "[typescriptreact]": {
@@ -87,4 +85,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "vscode-neovim.neovimInitPath": "$HOME/.init.vim"
 }
