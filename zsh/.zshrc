@@ -71,6 +71,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   autojump
   git
+  alias-finder
 )
 
 source $ZSH/oh-my-zsh.sh
