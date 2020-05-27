@@ -126,12 +126,11 @@ alias zshreload="source ~/.zshrc"
 
 # One for recursive git status -sb
 # Misc
-alias "-"="cd -"
-alias "-"="cd -"
+# alias "-"="cd -"
 alias l="ls -lah"
 
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin 
+export PATH=$PATH:$GOPATH/bin
 
 take () {
 	mkdir -p $@ && cs ${@:$#}
