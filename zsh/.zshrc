@@ -106,6 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Work config
 . ~/.zsh_99d
 
+alias personal="cd ~/code/personal"
+alias business="cd ~/code/99designs"
+
 # Aliases I am slowly copying over
 # Git
 alias g="git"
