@@ -72,6 +72,7 @@ plugins=(
   autojump
   git
   alias-finder
+  alias-tips
 )
 
 source $ZSH/oh-my-zsh.sh
