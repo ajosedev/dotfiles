@@ -1,23 +1,17 @@
 {
-	"Console log": {
-		"scope": "javascript, javascriptreact, typescript, typescriptreact",
-		"prefix": "cl",
-		"body": [
-			"console.log($1);",
-		]
-	},
-	"Console log with variable name": {
-		"scope": "javascript, javascriptreact, typescript, typescriptreact",
-		"prefix": "cla",
-		"body": [
-			"console.log('$1:', $1);",
-		]
-	},
-	"Console log with stringify": {
-		"scope": "javascript, javascriptreact, typescript, typescriptreact",
-		"prefix": "cls",
-		"body": [
-			"console.log(JSON.stringify($1, null, 2));",
-		]
-	},
+  "Console log": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "log",
+    "body": ["console.log($1);"]
+  },
+  "Console log with variable name": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "logv",
+    "body": ["console.log('$1:', $1);"]
+  },
+  "Console log with stringify": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "logs",
+    "body": ["console.log(JSON.stringify($1, null, 2));"]
+  }
 }

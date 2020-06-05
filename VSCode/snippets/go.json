@@ -14,7 +14,7 @@
 	// }
 
 	"Print variable to console": {
-		"prefix": "log",
+		"prefix": "logv",
 		"body": [
 			"fmt.Printf(\"$1: %s\\n\", $1)"
 		],
