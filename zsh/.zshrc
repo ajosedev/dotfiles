@@ -119,6 +119,11 @@ alias gs="git status"
 alias gp="git push"
 alias gc="git commit -v"
 alias gcm="git commit -m"
+alias grbm="git rebase master"
+#alias grbmb="git rebase -i $(git merge-base @ master)"
+grbmb () {
+	git rebase -i $(git merge-base @ master)
+}
 
 # Zsh
 alias zshrc="vim ~/.zshrc"
