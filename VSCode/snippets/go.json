@@ -13,10 +13,17 @@
 	// 	"description": "Log output to console"
 	// }
 
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"fmt.Println(\"$1\")"
+		],
+		"description": "Log string to console"
+	},
 	"Print variable to console": {
 		"prefix": "logv",
 		"body": [
-			"fmt.Printf(\"$1: %s\\n\", $1)"
+			"fmt.Printf(\"$1: %v\\n\", $1)"
 		],
 		"description": "Log variable to console"
 	},
