@@ -121,7 +121,11 @@ brew install \
   neovim \
   tmux \
   tmuxinator \
-  yarn
+  yarn \
+  fpp \
+  ripgrep \
+  fd \
+  sd
 
 # Tap homebrew/cask-versions
 brew tap homebrew/cask-versions
@@ -134,12 +138,14 @@ brew cask install \
   firefox \
   firefox-developer-edition \
   flux \
+  flycut \
   google-chrome \
   iterm2 \
   itsycal \
+  rectangle \
+  sensiblesidebuttons \
   sequel-pro \
   slack \
-  spectacle \
   spotify \
   visual-studio-code \
   zettlr
