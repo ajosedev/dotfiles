@@ -6,6 +6,8 @@
 	editor = vim
 	excludesfile = /Users/andrew/.gitignore_global
 	hooksPath = ~/githooks
+[pull]
+	ff = only
 [push]
 	default = simple
 [alias]
