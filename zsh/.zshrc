@@ -113,13 +113,17 @@ alias business="cd ~/code/99designs"
 # Git
 alias g="git"
 alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gcom="git checkout master"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gs="git status"
-alias gp="git push"
+alias gp="git pull"
+alias gpu="git push"
 alias gc="git commit -v"
 alias gcm="git commit -m"
 alias grbm="git rebase master"
+
 #alias grbmb="git rebase -i $(git merge-base @ master)"
 grbmb () {
 	git rebase -i $(git merge-base @ master)
@@ -138,5 +142,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 take () {
-	mkdir -p $@ && cs ${@:$#}
+	mkdir -p $@ && cd ${@:$#}
+}
+
+nw () {
+	tmux new-window -c $(j $@) && tmux rename-window $@
 }
