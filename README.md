@@ -19,7 +19,7 @@ Create `~/.gitconfig-work`
 ln -s ~/code/personal/dotfiles/git/.gitconfig ~/
 ln -s ~/code/personal/dotfiles/git/.gitconfig-personal ~/
 ln -s ~/code/personal/dotfiles/git/.gitignore ~/
-ln -s ~/code/personal/dotfiles/git/githooks ~/
+ln -s ~/code/personal/dotfiles/git/.gitattributes ~/
 ```
 
 ### iTerm2

@@ -5,7 +5,7 @@
 [core]
 	editor = vim
 	excludesfile = /Users/andrew/.gitignore_global
-	hooksPath = ~/githooks
+	attributesfile = /Users/andrewjose/.gitattributes
 [pull]
 	ff = only
 [push]
