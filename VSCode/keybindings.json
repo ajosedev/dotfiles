@@ -76,7 +76,13 @@
     "when": "editorTextFocus && neovim.mode == insert"
   },
   {
+    "key": "cmd+/",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.mode == visual",
+    "args": "<C-/>"
+  },
+  {
     "key": "shift+cmd+s",
     "command": "workbench.action.files.saveWithoutFormatting"
-  },
+  }
 ]
