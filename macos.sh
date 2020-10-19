@@ -125,7 +125,8 @@ brew install \
   fpp \
   ripgrep \
   fd \
-  sd
+  sd \
+  fzf
 
 # Tap homebrew/cask-versions
 brew tap homebrew/cask-versions

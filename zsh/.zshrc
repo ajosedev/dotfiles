@@ -73,6 +73,7 @@ plugins=(
   git
   alias-finder
   alias-tips
+  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
