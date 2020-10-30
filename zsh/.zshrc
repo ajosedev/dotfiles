@@ -74,6 +74,7 @@ plugins=(
   alias-finder
   alias-tips
   fzf
+  npm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,11 +105,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR="nvim"
+
 # Work config
 . ~/.zsh_99d
 
 alias personal="cd ~/code/personal"
 alias business="cd ~/code/99designs"
+
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+
 
 # Aliases I am slowly copying over
 # Git
