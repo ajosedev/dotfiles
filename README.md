@@ -11,6 +11,14 @@ Ideally helps me bootstrap new machines and installs quicker.
 
 ## Install
 
+### Emacs
+
+```
+ln -s ~/code/personal/dotfiles/emacs/config.el ~/.doom.d/
+ln -s ~/code/personal/dotfiles/emacs/init.el ~/.doom.d/
+ln -s ~/code/personal/dotfiles/emacs/packages.el ~/.doom.d/
+```
+
 ### Git
 
 Create `~/.gitconfig-work`
