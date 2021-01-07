@@ -158,3 +158,5 @@ take () {
 nw () {
 	tmux new-window -c $(j $@) && tmux rename-window $@
 }
+
+export PATH=$PATH:~/.emacs.d/bin
