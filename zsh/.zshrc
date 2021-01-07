@@ -130,6 +130,7 @@ alias gs="git status"
 alias gp="git pull"
 alias gpu="git push"
 alias gc="git commit -v"
+alias gcf="git commit --fixup"
 alias gcm="git commit -m"
 alias grbm="git rebase master"
 
