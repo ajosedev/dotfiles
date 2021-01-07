@@ -3,8 +3,8 @@
 [includeIf "gitdir:~/code/personal/"]
 	path = ~/.gitconfig-personal
 [core]
-	editor = vim
-	excludesfile = /Users/andrew/.gitignore_global
+	editor = nvim
+	excludesfile = /Users/andrewjose/.gitignore_global
 	attributesfile = /Users/andrewjose/.gitattributes
 [pull]
 	ff = only
