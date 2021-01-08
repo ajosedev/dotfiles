@@ -66,3 +66,11 @@
                           (eq buffer-file-coding-system 'utf-8)))))
 
 (add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
+
+;;tsx
+;;(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+
+(setq lsp-keep-workspace-alive nil)
+
+;; Fix LSP not using prettier config in TS
+(setq-hook! 'typescript-mode-hook +format-with-lsp nil)
