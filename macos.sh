@@ -148,6 +148,7 @@ brew cask install \
   sequel-pro \
   slack \
   spotify \
+  thor \
   visual-studio-code \
   zettlr
 
