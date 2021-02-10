@@ -67,10 +67,14 @@
 
 (add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
 
-;;tsx
-;;(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
-
 (setq lsp-keep-workspace-alive nil)
 
 ;; Fix LSP not using prettier config in TS
+(add-hook 'typescript-mode-hook #'format-all-mode)
 (setq-hook! 'typescript-mode-hook +format-with-lsp nil)
+(add-hook 'typescript-tsx-mode-hook #'format-all-mode)
+(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+
+;; Use goimports on save over gofmt
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
