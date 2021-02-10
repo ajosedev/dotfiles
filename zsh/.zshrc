@@ -134,9 +134,12 @@ alias gcf="git commit --fixup"
 alias gcm="git commit -m"
 alias grbm="git rebase master"
 
-#alias grbmb="git rebase -i $(git merge-base @ master)"
 grbmb () {
 	git rebase -i $(git merge-base @ master)
+}
+
+gcfl () {
+	gc --fixup $(git rev-parse HEAD)
 }
 
 # Zsh
