@@ -27,7 +27,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-palenight)
+(setq doom-theme 'doom-vibrant)
 (custom-set-faces!
   '(doom-modeline-buffer-modified :foreground "orange"))
 
@@ -78,3 +78,6 @@
 ;; Use goimports on save over gofmt
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
+
+;; lsp-doctor
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
