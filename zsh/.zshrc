@@ -117,6 +117,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
+alias rg="rg -S"
 
 # Aliases I am slowly copying over
 # Git
@@ -133,6 +134,7 @@ alias gc="git commit -v"
 alias gcf="git commit --fixup"
 alias gcm="git commit -m"
 alias grbm="git rebase master"
+alias gnvm="git reset --soft HEAD~1"
 
 grbmb () {
 	git rebase -i $(git merge-base @ master)
