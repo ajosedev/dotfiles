@@ -81,3 +81,8 @@
 
 ;; lsp-doctor
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
+
+;; evil-multiedit
+(map! :nv "s-d" #'evil-multiedit-match-symbol-and-next
+      :nv "s-D" #'evil-multiedit-match-symbol-and-prev
+      :nv "C-s-d" #'evil-multiedit-match-all)
