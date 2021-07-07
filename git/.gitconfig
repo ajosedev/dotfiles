@@ -11,7 +11,7 @@
 [push]
 	default = simple
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s $'
+	logg = log --graph
 	sf = show --pretty="format:" --name-only
 	pp = !sh -c 'git pull && git push'
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decora$
@@ -32,3 +32,7 @@
 	insteadOf = https://github.com/
 [rebase]
 	autosquash = true
+[log]
+	date = relative
+[format]
+	pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
