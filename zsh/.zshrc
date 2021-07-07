@@ -75,6 +75,8 @@ plugins=(
   alias-tips
   fzf
   npm
+  zsh-autosuggestions
+  zsh-syntax-highlighting # must be last
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,6 +120,8 @@ alias vi="nvim"
 alias v="nvim"
 
 alias rg="rg -S"
+
+alias cat="bat"
 
 # Aliases I am slowly copying over
 # Git
