@@ -27,7 +27,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-dracula)
 (custom-set-faces!
   '(doom-modeline-buffer-modified :foreground "orange"))
 
@@ -86,3 +86,16 @@
 (map! :nv "s-d" #'evil-multiedit-match-symbol-and-next
       :nv "s-D" #'evil-multiedit-match-symbol-and-prev
       :nv "C-s-d" #'evil-multiedit-match-all)
+(setq evil-multiedit-follow-matches 't)
+
+;; fix external keyboard option key not being bound
+(setq ns-right-option-modifier 'left)
+
+;; re-open last search
+(map! :leader "s ." (cmd! (+ivy/project-search nil (car counsel-git-grep-history))))
+
+
+;; temp fix for https://github.com/hlissner/doom-emacs/issues/4894
+(add-hook! lsp-mode
+  (defalias '+lookup/references 'lsp-find-references)
+  (defalias '+lookup/definition 'lsp-find-definition))
