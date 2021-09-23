@@ -169,3 +169,13 @@ nw () {
 }
 
 export PATH=$PATH:~/.emacs.d/bin
+
+# fzf
+export FZF_DEFAULT_COMMAND='fd'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+_fzf_compgen_path() {
+  fd --follow . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type d --follow . "$1"
+}
