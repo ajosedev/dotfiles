@@ -79,7 +79,7 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
-;; lsp-doctor
+;; lsp-doctor fixes
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 ;; evil-multiedit
@@ -93,9 +93,3 @@
 
 ;; re-open last search
 (map! :leader "s ." (cmd! (+ivy/project-search nil (car counsel-git-grep-history))))
-
-
-;; temp fix for https://github.com/hlissner/doom-emacs/issues/4894
-(add-hook! lsp-mode
-  (defalias '+lookup/references 'lsp-find-references)
-  (defalias '+lookup/definition 'lsp-find-definition))
