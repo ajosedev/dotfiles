@@ -20,7 +20,6 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Gatito Theme",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,

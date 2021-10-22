@@ -65,9 +65,9 @@
               (unless (or (eq buffer-file-coding-system 'utf-8-unix)
                           (eq buffer-file-coding-system 'utf-8)))))
 
-(add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
+;; (add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
 
-(setq lsp-keep-workspace-alive nil)
+;; (setq lsp-keep-workspace-alive nil)
 
 ;; Fix LSP not using prettier config in TS
 (add-hook 'typescript-mode-hook #'format-all-mode)

@@ -135,6 +135,7 @@ alias gs="git status"
 alias gp="git pull"
 alias gpu="git push"
 alias gc="git commit -v"
+alias gc!="gc --amend"
 alias gcf="git commit --fixup"
 alias gcm="git commit -m"
 alias grbm="git rebase master"
@@ -164,6 +165,10 @@ take () {
 	mkdir -p $@ && cd ${@:$#}
 }
 
+cde () {
+	for d in ./*/ ; do (cd "$d" && $@); done
+}
+
 nw () {
 	tmux new-window -c $(j $@) && tmux rename-window $@
 }
@@ -179,3 +184,7 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --follow . "$1"
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
