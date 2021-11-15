@@ -39,14 +39,6 @@ defaults write NSGlobalDomain AppleAccentColor 6
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
-# Expand save panel by default
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-
-# Expand print panel by default
-# defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-# defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -115,18 +107,19 @@ mkdir -p "${HOME}/code"
 
 # Install CLI stuff with brew
 brew install \
+  bat \
+  fd \
+  fpp \
+  fzf \
+  gh \
   git \
-  github/gh/gh \
-  n \
+  jq \
   neovim \
+  ripgrep \
+  sd \
   tmux \
   tmuxinator \
-  yarn \
-  fpp \
-  ripgrep \
-  fd \
-  sd \
-  fzf
+  yarn
 
 # Tap homebrew/cask-versions
 brew tap homebrew/cask-versions
@@ -139,24 +132,36 @@ brew install --cask \
   firefox \
   firefox-developer-edition \
   flux \
-  flycut \
   google-chrome \
   iterm2 \
   itsycal \
+  obsidian \
   rectangle \
   sensiblesidebuttons \
   sequel-pro \
   slack \
   spotify \
   thor \
+  tuple \
   visual-studio-code \
-  zettlr
+  zettlr \
+  zoom
 
 # Install node
-n lts
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
 
 # Install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install emacs
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+
+# Clone dotfiles
+git clone git@github.com:ajosedev/dotfiles.git "${HOME}/code/personal/dotfiles"
+~/code/personal/dotfiles/install.sh
 
 ###############################################################################
 # Kill affected applications                                                  #
