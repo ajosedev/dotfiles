@@ -4,8 +4,8 @@
 	path = ~/.gitconfig-personal
 [core]
 	editor = nvim
-	excludesfile = /Users/andrewjose/.gitignore_global
-	attributesfile = /Users/andrewjose/.gitattributes
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
 [pull]
 	ff = only
 [push]
