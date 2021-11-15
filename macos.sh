@@ -17,8 +17,11 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+while true; do
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
+done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -43,7 +46,6 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Expand print panel by default
 # defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -85,7 +87,6 @@ defaults write com.apple.dock mru-spaces -bool false
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -101,7 +102,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
-
 
 ###############################################################################
 # Dev                                                                         #
@@ -132,7 +132,7 @@ brew install \
 brew tap homebrew/cask-versions
 
 # Install apps with brew cask
-brew cask install \
+brew install --cask \
   1password \
   alfred \
   docker \
@@ -158,7 +158,6 @@ n lts
 # Install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
@@ -168,7 +167,7 @@ for app in "Activity Monitor" \
   "Dock" \
   "Finder" \
   "SystemUIServer"; do
-  killall "${app}" &> /dev/null
+  killall "${app}" &>/dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
