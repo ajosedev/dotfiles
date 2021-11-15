@@ -161,7 +161,7 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 
 # Clone dotfiles
 git clone git@github.com:ajosedev/dotfiles.git "${HOME}/code/personal/dotfiles"
-~/code/personal/dotfiles/install.sh
+bash ~/code/personal/dotfiles/install.sh
 
 ###############################################################################
 # Kill affected applications                                                  #
