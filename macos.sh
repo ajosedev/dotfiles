@@ -103,10 +103,11 @@ defaults write com.apple.finder ShowPathbar -bool true
 mkdir -p "${HOME}/code"
 
 # Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install CLI stuff with brew
 brew install \
+  autojump \
   bat \
   fd \
   fpp \
@@ -144,7 +145,6 @@ brew install --cask \
   thor \
   tuple \
   visual-studio-code \
-  zettlr \
   zoom
 
 # Install node
@@ -156,6 +156,9 @@ nvm install --lts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install emacs
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-modules
+ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
