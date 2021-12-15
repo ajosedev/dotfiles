@@ -59,7 +59,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Enable key repeating
-default write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
