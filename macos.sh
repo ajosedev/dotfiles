@@ -107,8 +107,10 @@ mkdir -p "${HOME}/code"
 
 # Install CLI stuff with brew
 brew install \
+  awscli \
   autojump \
   bat \
+  coreutils \
   fd \
   fpp \
   fzf \
@@ -118,9 +120,11 @@ brew install \
   neovim \
   ripgrep \
   sd \
+  tldr \
   tmux \
   tmuxinator \
-  yarn
+  yarn \
+  yq
 
 # Tap homebrew/cask-versions
 brew tap homebrew/cask-versions
