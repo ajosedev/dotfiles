@@ -2,6 +2,8 @@
 
 # TODO - Have to figure out commands for these
 # - Modifier keys: Caps lock -> Control
+# TODO - need to get ssh keys first for GitHub
+# TODO - zsh installation stops rest of script
 
 # Heavily inspired by https://github.com/kentcdodds/dotfiles/blob/master/.macos =
 
@@ -166,10 +168,6 @@ ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
-# Clone dotfiles
-git clone git@github.com:ajosedev/dotfiles.git "${HOME}/code/personal/dotfiles"
-bash ~/code/personal/dotfiles/install.sh
-
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
@@ -182,5 +180,3 @@ for app in "Activity Monitor" \
   killall "${app}" &>/dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
-
-echo "TODO: Dotfiles, SSH, Gitconfig"
