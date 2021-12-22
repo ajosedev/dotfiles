@@ -126,6 +126,7 @@ alias cat="bat"
 # Aliases I am slowly copying over
 # Git
 alias g="git"
+alias gb="git branch --sort=committerdate"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gcom="git checkout master"
