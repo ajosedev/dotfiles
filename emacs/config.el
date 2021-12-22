@@ -93,3 +93,6 @@
 
 ;; re-open last search
 (map! :leader "s ." (cmd! (+ivy/project-search nil (car counsel-git-grep-history))))
+
+;; increase idle delay for company (autocomplete) in markdown-mode
+(setq-hook! 'markdown-mode company-idle-delay 0.5)
