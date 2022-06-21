@@ -96,3 +96,8 @@
 
 ;; increase idle delay for company (autocomplete) in markdown-mode
 (setq-hook! 'markdown-mode company-idle-delay 0.5)
+
+;; fix flycheck init load times due to flycheck-perform-deferred-syntax-check
+;; this in turn runs `eslint --print-config` which can be slow
+(with-eval-after-load 'flycheck
+  (advice-add 'flycheck-eslint-config-exists-p :override (lambda() t)))
