@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 (package! graphql-mode)
+
+(package! dired-subtree)
