@@ -69,7 +69,9 @@
 
 ;; (setq lsp-keep-workspace-alive nil)
 
-;; Fix LSP not using prettier config in TS
+;; Fix LSP not using prettier config in JS/TS
+(add-hook 'rjsx-mode-hook #'format-all-mode)
+(setq-hook! 'rjsx-mode-hook +format-with-lsp nil)
 (add-hook 'typescript-mode-hook #'format-all-mode)
 (setq-hook! 'typescript-mode-hook +format-with-lsp nil)
 (add-hook 'typescript-tsx-mode-hook #'format-all-mode)
