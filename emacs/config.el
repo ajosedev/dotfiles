@@ -110,3 +110,11 @@
   :config
   (bind-key "<tab>" #'dired-subtree-toggle dired-mode-map)
   (bind-key "<backtab>" #'dired-subtree-cycle dired-mode-map))
+
+;; doom's `persp-mode' activation disables uniquify, b/c it says it breaks it.
+;; It doesn't cause big enough problems for me to worry about it, so we override
+;; the override. `persp-mode' is activated in the `doom-init-ui-hook', so we add
+;; another hook at the end of the list of hooks to set our uniquify values.
+(add-hook! 'doom-init-ui-hook
+           :append ;; ensure it gets added to the end.
+           #'(lambda () (require 'uniquify) (setq uniquify-buffer-name-style 'forward)))
