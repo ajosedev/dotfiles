@@ -34,6 +34,10 @@ ln -s ~/code/personal/dotfiles/git/.gitattributes ~/
 
 Settings -> General -> Preferences -> Load preferences from a custom folder or URL...
 
+### Raycast
+
+Settings -> Advanced -> Import / Export
+
 ### Tmux
 
 `ln -s ~/code/personal/dotfiles/tmux/.tmux.conf ~/`
