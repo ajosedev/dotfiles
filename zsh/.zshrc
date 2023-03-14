@@ -110,8 +110,11 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --follow . "$1"
 }
+rgf () {
+	export FZF_DEFAULT_COMMAND="rg --column --line-number --no-heading --color=always -- ''"
+	fzf --ansi --delimiter ':' --nth '3..'
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
