@@ -49,6 +49,7 @@ Settings -> Advanced -> Import / Export
 ### Vim
 
 `ln -s ~/code/personal/dotfiles/vim/.vimrc ~/`
+`ln -s ~/code/personal/dotfiles/vim/init.vim ~/.config/nvim/init.vim`
 
 ### Zsh
 
