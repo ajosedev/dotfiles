@@ -28,3 +28,6 @@ vim.cmd([[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
 ]])
+
+vim.opt.number = true
+vim.opt.syntax = on
