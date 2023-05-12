@@ -31,3 +31,5 @@ vim.cmd([[
 
 vim.opt.number = true
 vim.opt.syntax = on
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
