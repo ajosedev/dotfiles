@@ -53,7 +53,7 @@ alias fzfp="fzf --preview 'bat --color=always {}'"
 
 # Git
 alias g="git"
-alias gb="git branch --sort=-committerdate"
+alias gb="git branch --sort=-committerdate -v"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gcom="git checkout main"
