@@ -56,7 +56,7 @@ alias g="git"
 alias gb="git branch --sort=-committerdate"
 alias gcb="git checkout -b"
 alias gco="git checkout"
-alias gcom="git checkout master"
+alias gcom="git checkout main"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gs="git status"
@@ -66,11 +66,11 @@ alias gc="git commit -v"
 alias gc!="gc --amend"
 alias gcf="git commit --fixup"
 alias gcm="git commit -m"
-alias grbm="git rebase master"
+alias grbm="git rebase main"
 alias gnvm="git reset --soft HEAD~1"
 
 grbmb () {
-	git rebase -i $(git merge-base @ master)
+	git rebase -i $(git merge-base @ main)
 }
 
 gcfl () {
