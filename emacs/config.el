@@ -118,3 +118,5 @@
 (add-hook! 'doom-init-ui-hook
            :append ;; ensure it gets added to the end.
            #'(lambda () (require 'uniquify) (setq uniquify-buffer-name-style 'forward)))
+
+(add-hook 'lsp-mode-hook #'lsp-headerline-breadcrumb-mode)
