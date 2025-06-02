@@ -39,3 +39,5 @@ vim.opt.number = true
 vim.opt.syntax = on
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+vim.opt.clipboard = "unnamedplus"
+
