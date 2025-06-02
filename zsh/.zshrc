@@ -68,6 +68,7 @@ alias gcf="git commit --fixup"
 alias gcm="git commit -m"
 alias grbm="git rebase main"
 alias gnvm="git reset --soft HEAD~1"
+alias grsm="git restore --source=main"
 
 grbmb () {
 	git rebase -i $(git merge-base @ main)
