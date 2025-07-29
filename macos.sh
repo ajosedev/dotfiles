@@ -109,7 +109,6 @@ mkdir -p "${HOME}/code"
 
 # Install CLI stuff with brew
 brew install \
-  awscli \
   autojump \
   bat \
   coreutils \
@@ -123,10 +122,7 @@ brew install \
   ripgrep \
   sd \
   tldr \
-  tmux \
-  tmuxinator \
-  yarn \
-  yq
+  yarn
 
 # Tap homebrew/cask-versions
 brew tap homebrew/cask-versions
@@ -134,27 +130,23 @@ brew tap homebrew/cask-versions
 # Install apps with brew cask
 brew install --cask \
   1password \
-  alfred \
+  clocker \
   docker \
   firefox \
   firefox-developer-edition \
-  flux \
   google-chrome \
   iterm2 \
   itsycal \
   obsidian \
-  rectangle \
-  sensiblesidebuttons \
+  raycast \
   sequel-pro \
   slack \
   spotify \
-  thor \
-  tuple \
   visual-studio-code \
   zoom
 
 # Install node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 source ~/.bashrc
 nvm install --lts
 
@@ -162,11 +154,11 @@ nvm install --lts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install emacs
-brew tap railwaycat/emacsmacport
-brew install emacs-mac --with-modules
-ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+# brew tap railwaycat/emacsmacport
+# brew install emacs-mac --with-modules
+# ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
+# git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+# ~/.emacs.d/bin/doom install
 
 ###############################################################################
 # Kill affected applications                                                  #
