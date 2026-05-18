@@ -69,6 +69,9 @@ alias gcm="git commit -m"
 alias grbm="git rebase main"
 alias gnvm="git reset --soft HEAD~1"
 alias grsm="git restore --source=main"
+alias gwt="git worktree"
+alias gwta='git worktree add ../worktrees/"$1" "$2"'
+alias gwtl="git worktree list"
 
 grbmb () {
 	git rebase -i $(git merge-base @ main)
