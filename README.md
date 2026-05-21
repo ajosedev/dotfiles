@@ -4,11 +4,6 @@ Storage for dotfiles, configs, etc.
 
 Ideally helps me bootstrap new machines and installs quicker.
 
-## TODO:
-
-- Install script for placing/symlinking dotfile
-- Zsh theme
-
 ## Install
 
 ### Emacs
@@ -30,27 +25,14 @@ ln -s ~/code/personal/dotfiles/git/.gitignore_global ~/
 ln -s ~/code/personal/dotfiles/git/.gitattributes ~/
 ```
 
-### iTerm2
-
-Settings -> General -> Preferences -> Load preferences from a custom folder or URL...
-
 ### Raycast
 
 Settings -> Advanced -> Import / Export
 
-### Tmux
-
-`ln -s ~/code/personal/dotfiles/tmux/.tmux.conf ~/`
-
-### VSCode
-
-`ln -s ~/code/personal/dotfiles/VSCode/* ~/Library/Application\ Support/Code/User`
-
 ### Vim
 
-`ln -s ~/code/personal/dotfiles/vim/.vimrc ~/`
-`ln -s ~/code/personal/dotfiles/vim/init.lua ~/.config/nvim/init.lua`
+ln -s ~/code/personal/dotfiles/vim/init.lua ~/.config/nvim/init.lua
 
 ### Zsh
 
-`ln -s ~/code/personal/dotfiles/zsh/.zshrc ~/`
+ln -s ~/code/personal/dotfiles/zsh/.zshrc ~/

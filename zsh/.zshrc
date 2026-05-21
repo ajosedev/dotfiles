@@ -1,41 +1,4 @@
-export ZSH="/Users/andrewjose/.oh-my-zsh"
-
-# Using pure, which is set elsewhere
-ZSH_THEME=""
-
-DISABLE_UPDATE_PROMPT="true"
-COMPLETION_WAITING_DOTS="true"
-
-plugins=(
-  autojump
-  git
-  alias-finder
-  alias-tips
-  fzf
-  npm
-  zsh-autosuggestions
-  zsh-syntax-highlighting # must be last
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# Use pure theme
-autoload -U promptinit; promptinit
-prompt pure
-
 export EDITOR="nvim"
-
-# Work config
-. ~/.zsh_99d
-
-alias personal="cd ~/code/personal"
-alias business="cd ~/code/99designs"
-
-# Path
-export GOPATH=$HOME/go
-path+=$GOPATH/bin
-path+=~/.emacs.d/bin
-path+=/opt/homebrew/opt/go@1.16/bin
 
 # Vim
 alias vim="nvim"
@@ -53,6 +16,7 @@ alias fzfp="fzf --preview 'bat --color=always {}'"
 
 # Git
 alias g="git"
+alias ga="git add"
 alias gb="git branch --sort=-committerdate -v"
 alias gcb="git checkout -b"
 alias gco="git checkout"
@@ -74,87 +38,52 @@ alias gwta='git worktree add ../worktrees/"$1" "$2"'
 alias gwtl="git worktree list"
 
 grbmb () {
-	git rebase -i $(git merge-base @ main)
+        git rebase -i $(git merge-base @ main)
 }
 
 gcfl () {
-	gc --fixup $(git rev-parse HEAD)
+        gc --fixup $(git rev-parse HEAD)
 }
 
 # Zsh
 alias zshrc="vim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 
-# One for recursive git status -sb
 # Misc
-# alias "-"="cd -"
+#alias "-"="cd -"
+#alias ".."="cd .."
+#alias "..."="cd ..."
 alias l="ls -lah"
 
-# Less
-alias less="less -R"
-
 take () {
-	mkdir -p $@ && cd ${@:$#}
+        mkdir -p $@ && cd ${@:$#}
 }
 
 cde () {
-	for d in ./*/ ; do (cd "$d" && $@); done
+        for d in ./*/ ; do (cd "$d" && $@); done
 }
 
-nw () {
-	tmux new-window -c $(j $@) && tmux rename-window $@
-}
+# ---
 
-
-# fzf
-export FZF_DEFAULT_COMMAND='fd'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-_fzf_compgen_path() {
-  fd --follow . "$1"
-}
-_fzf_compgen_dir() {
-  fd --type d --follow . "$1"
-}
-rgf () {
-	export FZF_DEFAULT_COMMAND="rg --column --line-number --no-heading --color=always -- ''"
-	fzf --ansi --delimiter ':' --nth '3..'
-}
-rgv () {
-	[[ -n $1 ]] && cd "$1" # go to provided folder or noop
-
-	export FZF_DEFAULT_COMMAND="rg --column --line-number --no-heading --color=always -- ''"
-	selected=$(
-	  fzf \
-	    --ansi \
-	    --delimiter : \
-	    --bind "f12:execute-silent:(code -g $PWD/{1..3})" \
-	    --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-	    --preview 'bat -f --highlight-line={2} {1}' | cut -d":" -f1,2,3
-	)
-
-	[[ -n $selected ]] && code -g "$PWD"/"$selected"
-}
-
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local nvmrc_path="$(nvm_find_nvmrc)"
+# ZSH Syntax Highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+# ZSH Autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use
-    fi
-  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# FZF
+source <(fzf --zsh)
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Starship
+eval "$(starship init zsh)"
+
+# Vista Config (vconfig)
+export PATH="$HOME/.vista/vconfig/bin:$PATH"

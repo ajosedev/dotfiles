@@ -1,36 +1,18 @@
-[includeIf "gitdir:~/code/99designs/"]
+[includeIf "gitdir:~/code/vista/"]
 	path = ~/.gitconfig-work
 [includeIf "gitdir:~/code/personal/"]
 	path = ~/.gitconfig-personal
 [core]
-	editor = nvim
 	excludesfile = ~/.gitignore_global
-	attributesfile = ~/.gitattributes
 [pull]
 	ff = only
 [push]
 	default = simple
 	autoSetupRemote = true
-[alias]
-	logg = log --graph
-	sf = show --pretty="format:" --name-only
-	pp = !sh -c 'git pull && git push'
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decora$
-	br = branch -avv
-	s = status
-	p = pull
-	pu = push
-	d = diff
-	co = checkout
-	lgfp = log --name-only --first-parent
-	sps = !git stash && git pull && git stash pop
-	cleanup = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 [color]
 	ui = true
 [commit]
 	verbose = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [rebase]
 	autosquash = true
 [log]
