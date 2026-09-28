@@ -14,6 +14,14 @@ ln -s ~/code/personal/dotfiles/emacs/init.el ~/.doom.d/
 ln -s ~/code/personal/dotfiles/emacs/packages.el ~/.doom.d/
 ```
 
+### OpenCode
+
+```sh
+ln -s ~/code/personal/dotfiles/ai/AGENTS.md ~/.config/opencode/AGENTS.md
+```
+
+The global OpenCode configuration must include `~/.config/opencode/AGENTS.md` in its `instructions` array.
+
 ### Git
 
 Create `~/.gitconfig-work`
