@@ -4,6 +4,8 @@
 	path = ~/.gitconfig-personal
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = nvim
+	pager = less -+X
 [pull]
 	ff = only
 [push]
