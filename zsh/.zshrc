@@ -77,14 +77,20 @@ _gwt_target_dir() {
 }
 gwta() {
   if [ $# -lt 1 ]; then
-    printf 'usage: gwta <folder-name> [branch-name] [base-branch]\n'
+    printf 'usage: gwta <ticket-name> [worktree-name] [base-branch]\n'
     return 2
   fi
-  local folder="$1"
-  local branch="${2:-$folder}"
+
+  local ticket="$1"
+  local name="${2:-}"
   local base="${3:-main}"
+  local folder="$ticket"
+  [ -n "$name" ] && folder="$ticket-$name"
+
+  local branch="$ticket"
   local target="$(_gwt_target_dir "$folder")"
   mkdir -p "$(dirname "$target")"
+
   if git show-ref --verify --quiet "refs/heads/$branch"; then
     git worktree add "$target" "$branch"
   else
