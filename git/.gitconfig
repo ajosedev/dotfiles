@@ -1,5 +1,6 @@
-[includeIf "gitdir:~/code/vista/"]
-	path = ~/.gitconfig-work
+[user]
+	name = Andrew Jose
+	email = andrew.jose@vista.com
 [includeIf "gitdir:~/code/personal/"]
 	path = ~/.gitconfig-personal
 [core]

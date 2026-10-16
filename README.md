@@ -24,8 +24,6 @@ The global OpenCode configuration must include `~/.config/opencode/AGENTS.md` in
 
 ### Git
 
-Create `~/.gitconfig-work`
-
 ```
 ln -s ~/code/personal/dotfiles/git/.gitconfig ~/
 ln -s ~/code/personal/dotfiles/git/.gitconfig-personal ~/
